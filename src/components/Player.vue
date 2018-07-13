@@ -3,7 +3,7 @@
     <h1>球员页面</h1>
     <p>球员编号:{{detail.uid}}</p>
     <p>球员名字:{{detail.name}}</p>
-    <p>球员得分:{{detail.point}}</p>
+    <p>球员得分:{{detail.point}}</p> 
     <router-link :to="state">简介</router-link>
     <router-link :to="profile">详情</router-link>
     <router-view></router-view>
@@ -27,7 +27,7 @@ export default {
   beforeRouteUpdate (to, from, next) {
     this.detail = this.getPlayer(to.params.uid)
     this.profile = '/hi1/player/' + to.params.uid + '/profile';
-    this.stats = '/hi1/player/' + to.params.uid + '/stats';
+    this.state = '/hi1/player/' + to.params.uid + '/state';
     next()
   },
   beforeRouteLeave (to, from, next) {
