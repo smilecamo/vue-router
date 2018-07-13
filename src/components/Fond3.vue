@@ -1,16 +1,18 @@
 <template>
   <div>
-    {{msg}}---{{$route.params.uid}}
-    <hr>
+    <h2>{{msg}}</h2>
   </div>
 </template>
 <script>
 export default {
-  name: 'Namer',
+  name: 'Fond3',
   data () {
     return {
-      msg: '我是name下age组件'
+      msg: '海角'
     }
   }
 }
 </script>
+<style scoped>
+
+</style>

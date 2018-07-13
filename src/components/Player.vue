@@ -26,16 +26,16 @@ export default {
   },
   beforeRouteUpdate (to, from, next) {
     this.detail = this.getPlayer(to.params.uid)
-    this.profile = '/hi1/player/' + to.params.uid + '/profile';
-    this.state = '/hi1/player/' + to.params.uid + '/state';
-    next()
+    this.profile = '/hi1/player/' + to.params.uid + '/profile'
+    this.state = '/hi1/player/' + to.params.uid + '/state'
+    next();
   },
   beforeRouteLeave (to, from, next) {
     const answer = window.confirm('Do you really want to leave? you have unsaved changes!')
     if (answer) {
       next()
     } else {
-      next(false)
+      next (false)
     }
   },
   methods: {

@@ -23,13 +23,13 @@ export default {
   },
   mounted () {
     this.detail = this.getDefault(this.$route.params.uid)
-    this.name = '/name/'+this.$route.params.uid+'/namer'
-    this.age = '/name/'+this.$route.params.uid+'/age'
+    this.name = '/name/' + this.$route.params.uid + '/namer'
+    this.age = '/name/' + this.$route.params.uid + '/age'
   },
   beforeRouteUpdate (to, from, next) {
     this.detail = this.getDefault(to.params.uid)
-    this.name = '/name/'+to.params.uid+'/namer'
-    this.age = '/name/'+to.params.uid+'/age'
+    this.name = '/name/' + to.params.uid + '/namer'
+    this.age = '/name/' + to.params.uid + '/age'
     next ()
   },
   methods: {

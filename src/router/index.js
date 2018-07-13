@@ -3,6 +3,8 @@ import Router from 'vue-router' // 引入vue-router
 import HelloWorld from '@/components/HelloWorld' // 引入我们开发组件(页面)
 import Fond from '@/components/Fond' // 同上,这里初始时没有,是我又加的后来
 import Fond1 from '@/components/Fond1'
+import Fond2 from '@/components/Fond2'
+import Fond3 from '@/components/Fond3'
 import Hi1 from '@/components/Hi'
 import Player from '@/components/Player'
 import State from '@/components/State'
@@ -10,6 +12,7 @@ import Profile from '@/components/Profile'
 import Name from '@/components/name'
 import Namer from '@/components/namer'
 import Age from '@/components/age'
+import Head from '@/components/Head'
 
 Vue.use(Router) // 使用Router
 
@@ -23,6 +26,15 @@ export default new Router({
         default: HelloWorld,
         a: Fond1,
         b: Fond
+      }
+    },
+    {
+      path: '/Head',
+      name: 'Head',
+      components: {
+        default: Head,
+        v: Fond2,
+        w: Fond3
       }
     },
     {
