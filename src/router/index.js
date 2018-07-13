@@ -5,6 +5,9 @@ import Fond from '@/components/Fond' // 同上,这里初始时没有,是我又�
 import Fond1 from '@/components/Fond1'
 // import Load from '@/components/Load'
 import Hi1 from '@/components/Hi'
+import Player from '@/components/Player'
+import State from '@/components/State'
+import Profile from '@/components/Profile'
 
 Vue.use(Router) // 使用Router
 
@@ -23,11 +26,24 @@ export default new Router({
     {
       path: '/Hi1', // 路由的路径
       name: 'Hi1', // 路由的名称,以后会有其他用途
-      components: {
-        default: Hi1,
-        left: Fond,
-        right: Fond1
-      }
+      component: Hi1,
+      children: [
+        {
+          path: 'Player/:uid',
+          name: 'Player',
+          component: Player,
+          children: [
+            {
+              path: 'state',
+              component: State
+            },
+            {
+              path: 'Profile',
+              component: Profile
+            }
+          ]
+        }
+      ]
     }
   ]
 })

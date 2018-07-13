@@ -1,9 +1,9 @@
 <template>
   <div>
     {{msg}} <br>
+    <router-link to="/hi1/player/1">库里</router-link>|
+    <router-link to="/hi1/player/2">哈登</router-link>|
     <router-view></router-view>
-    <router-view name='left'></router-view>
-    <router-view name='right'></router-view>
   </div>
 </template>
 <script>

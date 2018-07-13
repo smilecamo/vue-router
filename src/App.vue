@@ -2,7 +2,9 @@
   <div id="app">
     <img src="./assets/logo.png">
     <br>
-    <router-link to="/hi1">hi</router-link>
+    <router-link to="/hi1">hi</router-link>|
+
+    <router-link to="/">首页</router-link>
     <router-view></router-view>
     <router-view name="a" class="left"></router-view>
     <router-view name="b" class="left"></router-view>
